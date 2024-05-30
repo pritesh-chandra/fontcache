@@ -1,0 +1,40 @@
+{
+  "name": "fontcache",
+  "version": "1.0.0",
+  "description": "A tool to download and manage Google Fonts locally.",
+  "main": "src/fontcache.js",
+  "scripts": {
+    "download-fonts": "node bin/downloadFonts.js",
+    "postinstall": "node bin/downloadFonts.js",
+    "test": "mocha",
+    "coverage": "nyc mocha"
+  },
+  "bin": {
+    "download-fonts": "bin/downloadFonts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pritesh-chandra/fontcache.git"
+  },
+  "author": "Pritesh Chandra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pritesh-chandra/fontcache/issues"
+  },
+  "homepage": "https://github.com/pritesh-chandra/fontcache#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-as-promised": "^7.1.2",
+    "istanbul-lib-coverage": "^3.2.2",
+    "istanbul-lib-instrument": "^6.0.2",
+    "istanbul-lib-report": "^3.0.1",
+    "istanbul-lib-source-maps": "^5.0.4",
+    "istanbul-reports": "^3.1.7",
+    "mocha": "^10.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^18.0.0"
+  }
+}

@@ -11,11 +11,11 @@ FontCache is a modern tool that downloads and manages Google Fonts locally, allo
 
 ## Benefits
 ### 1. **Offline Availability**
-With FontFetchr, you can use Google Fonts in environments with restricted internet access or offline mode, ensuring that your project’s typography is always available.
+With FontCache, you can use Google Fonts in environments with restricted internet access or offline mode, ensuring that your project’s typography is always available.
 ### 2. **Improved Performance**
 By hosting fonts locally, you reduce the need for external HTTP requests, leading to faster load times and better performance, especially in resource-constrained environments.
 ### 3. **Increased Privacy**
-FontFetchr eliminates the need for external API calls to Google Fonts, which can enhance user privacy and comply with data protection regulations by preventing user data from being shared with third parties.
+FontCache eliminates the need for external API calls to Google Fonts, which can enhance user privacy and comply with data protection regulations by preventing user data from being shared with third parties.
 ### 4. **Customization**
 Easily configure which fonts and weights to download, tailored to your project's specific needs, reducing unnecessary bloat and ensuring optimal performance.
 ### 5. **Consistency**

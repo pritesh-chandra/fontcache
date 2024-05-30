@@ -116,12 +116,12 @@ By default, FontCache downloads fonts to the `public/Fonts` directory. You can c
 ```
 
 ## Test Coverage
-------------|---------|----------|---------|---------|-------------------
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------|---------|----------|---------|---------|-------------------
-All files   |   93.33 |     62.5 |   66.66 |   93.33 |                   
- ...onts.js |   93.33 |     62.5 |   66.66 |   93.33 | 47-48             
-------------|---------|----------|---------|---------|-------------------
+
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------|---------|----------|---------|---------|-------------------
+All files        |   93.33 |     62.5 |   66.66 |   93.33 |                   
+downloadFonts.js |   93.33 |     62.5 |   66.66 |   93.33 | 47-48             
+
 
 ## Contributing
 We welcome contributions to FontCache! If you have ideas for improvements or find bugs, please open an issue or submit a pull request on [GitHub](https://github.com/pritesh-chandra/fontcache/pulls).

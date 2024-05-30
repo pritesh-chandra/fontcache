@@ -5,7 +5,8 @@ const path = require('path');
 const fetch = require('node-fetch');
 const config = require(path.join(process.cwd(), 'fonts.config.json'));
 
-const publicFolderDir = path.join(process.cwd(), 'public', 'Fonts');
+const customFontDir = config.outputDir;
+const publicFolderDir = customFontDir ? path.join(process.cwd(), customFontDir) : path.join(process.cwd(), 'public', 'Fonts');
 
 if(!fs.existsSync(publicFolderDir)) {
     fs.mkdirSync(publicFolderDir, { recursive: true });

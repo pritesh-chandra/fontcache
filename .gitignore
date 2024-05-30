@@ -131,6 +131,3 @@ dist
 
 # ignore the tested code downloads
 public
-
-# public-lock.json
-public-lock.json

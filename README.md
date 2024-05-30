@@ -106,7 +106,7 @@ By default, FontCache downloads fonts to the `public/Fonts` directory. You can c
 ```
 
 ## License
-FontCache is licensed under the MIT License. See the LICENSE(./LICENSE) file for more information.
+FontCache is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
 
 ### Summary
 - **Title and Introduction**: Clearly state the package's name and purpose.

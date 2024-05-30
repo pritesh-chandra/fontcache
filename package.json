@@ -18,6 +18,7 @@
   },
   "author": "Pritesh Chandra",
   "license": "MIT",
+  "keywords": ["font-cache", "fonts", "webfonts", "google-fonts", "react", "node", "css", "build-tools", "web-development", "cache", "typography"],
   "bugs": {
     "url": "https://github.com/pritesh-chandra/fontcache/issues"
   },

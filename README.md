@@ -63,14 +63,14 @@ Reference the downloaded fonts in your CSS file:
 ```css
 @font-face {
   font-family: 'OpenSans';
-  src: url('/Fonts/OpenSans/OpenSans-400.woff2') format('woff2');
+  src: url('/public/Fonts/OpenSans/OpenSans-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url('/Fonts/OpenSans/OpenSans-700.woff2') format('woff2');
+  src: url('/public/Fonts/OpenSans/OpenSans-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
@@ -114,6 +114,9 @@ By default, FontCache downloads fonts to the `public/Fonts` directory. You can c
   "outputDir": "static/fonts"
 }
 ```
+
+## Contributing
+We welcome contributions to FontCache! If you have ideas for improvements or find bugs, please open an issue or submit a pull request on [GitHub](https://github.com/pritesh-chandra/fontcache/pulls).
 
 ## License
 FontCache is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.

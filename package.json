@@ -1,6 +1,6 @@
 {
   "name": "fontcache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to download and manage Google Fonts locally.",
   "main": "src/fontcache.js",
   "scripts": {

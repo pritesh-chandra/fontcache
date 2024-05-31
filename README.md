@@ -77,15 +77,24 @@ FontCache also generates a `{fontName}.css` file with `@font-face` declarations 
 }
 ```
 
-## Automatically adds preloader to `index.html` file
-FontCache also generates a preloader inside `index.html` file for each downloaded font. This will help developers to directly just use the fonts by name inside `components.css files`.
+## Now you just need to include preloader inside `index.html` file or directly use inside your css file
 *This is an example of `Roboto` font that is included as preloader inside `/public/index.html`.*
 ```html
 <link rel="stylesheet" href="%PUBLIC_URL%/Fonts/Roboto/Roboto.css" />
 ```
 
-Then, use these fonts in your React components:
-*Inline react styling*
+```css
+h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+```
+
 ```jsx
 import React from 'react';
 import './App.css'; // Ensure this CSS file contains your @font-face definitions
@@ -100,19 +109,6 @@ const App = () => {
 };
 
 export default App;
-```
-
-*Inside specific css file*
-```css
-h1 {
-  font-family: "Roboto";
-  font-weight: 700;
-}
-
-p {
-  font-family: "Roboto";
-  font-weight: 400;
-}
 ```
 
 ## Advanced Usage

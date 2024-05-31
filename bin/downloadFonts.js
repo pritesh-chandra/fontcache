@@ -72,27 +72,6 @@ const updateCSSFile = (fontFamily, fontWeight, fontPath) => {
     }
 };
 
-const addPreloaderToIndexHTML = (fontFamilies) => {
-    const indexPath = path.join("public", "index.html");
-    let indexHTML = fs.readFileSync(indexPath, "utf-8");
-
-    const preloaderTags = fontFamilies.map((fontFamily) => {
-        return `<link rel="stylesheet" href="%PUBLIC_URL%/Fonts/${fontFamily}/${fontFamily}.css" />`;
-    }).join('\n');
-
-    const headTagPosition = indexHTML.indexOf('<head>');
-    if (headTagPosition !== -1) {
-        indexHTML =
-            indexHTML.slice(0, headTagPosition + 6) + 
-            '\n' + preloaderTags + '\n' +
-            indexHTML.slice(headTagPosition + 6);
-    } else {
-        console.log("No <head> tag found in index.html. Preloader HTML not added.");
-    }
-
-    fs.writeFileSync(indexPath, indexHTML);
-};
-
 const downloadAllFonts = async () => {
     const fontFamilies = [];
   
@@ -105,7 +84,6 @@ const downloadAllFonts = async () => {
         updateCSSFile(family, weight, `./${sanitizedFamily}-${weight}.woff2`);
       }
     }
-    addPreloaderToIndexHTML(fontFamilies);
   };
   
 

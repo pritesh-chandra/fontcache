@@ -58,35 +58,41 @@ Add a script to your project's `package.json` to run the font downloader after d
 
 This script will download the specified fonts and place them in the public/Fonts directory.
 
-## Include Fonts in Your Project
-Reference the downloaded fonts in your CSS file:
+## Automatically Generate CSS File
+FontCache also generates a `{fontName}.css` file with `@font-face` declarations for each downloaded font. This file will be placed in the same directory where the fonts are downloaded, making it easy to include in your project.
+*This is an example of `Roboto.css` file that is generated inside `/public/Fonts/Roboto`.*
 ```css
 @font-face {
-  font-family: 'OpenSans';
-  src: url('/public/Fonts/OpenSans/OpenSans-400.woff2') format('woff2');
+  font-family: 'Roboto';
+  src: url('/public/Fonts/Roboto/Roboto-400.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('/public/Fonts/OpenSans/OpenSans-700.woff2') format('woff2');
+  font-family: 'Roboto';
+  src: url('/public/Fonts/Roboto/Roboto-700.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
+```
 
-/* Add other @font-face rules as needed */
+## Automatically adds preloader to `index.html` file
+FontCache also generates a preloader inside `index.html` file for each downloaded font. This will help developers to directly just use the fonts by name inside `components.css files`.
+*This is an example of `Roboto` font that is included as preloader inside `/public/index.html`.*
+```html
+<link rel="stylesheet" href="%PUBLIC_URL%/Fonts/Roboto/Roboto.css" />
 ```
 
 Then, use these fonts in your React components:
-
+*Inline react styling*
 ```jsx
 import React from 'react';
 import './App.css'; // Ensure this CSS file contains your @font-face definitions
 
 const App = () => {
   return (
-    <div style={{ fontFamily: 'OpenSans, sans-serif' }}>
+    <div style={{ fontFamily: 'Roboto' }}>
       <h1>Hello, world!</h1>
       <p>This is a paragraph with dynamic fonts!</p>
     </div>
@@ -94,6 +100,19 @@ const App = () => {
 };
 
 export default App;
+```
+
+*Inside specific css file*
+```css
+h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 400;
+}
 ```
 
 ## Advanced Usage
@@ -114,6 +133,9 @@ By default, FontCache downloads fonts to the `public/Fonts` directory. You can c
   "outputDir": "static/fonts"
 }
 ```
+
+## Screenshot of `public` folder
+![Screenshot of public folder showcasing folder structure](https://ibb.co/bPZndgs)
 
 ## Test Coverage
 
